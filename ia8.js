@@ -19,3 +19,19 @@ function pairElement(str) {
 }
 
 pairElement("GCG");
+
+function pairElement2(str) {
+  let startObj = {
+    G: 'C',
+    C: 'G',
+    T: 'A',
+    A: 'T'
+  }
+  let arr = [];
+  for (const item of str) {
+    arr.push([item, startObj[item]]);
+  }
+  return arr;
+}
+
+pairElement2("GCG");
