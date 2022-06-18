@@ -35,3 +35,17 @@ function pairElement2(str) {
 }
 
 pairElement2("GCG");
+
+function pairElement3(str) {
+  let arr = [];
+  let map = new Map([
+    ["G", "C"],
+    ["C", "G"],
+    ["T", "A"],
+    ["A", "T"],
+  ]);
+  for (let i = 0; i < str.length; i++) {
+    arr.push([str[i], map.get(str[i])])
+  }
+  return arr;
+}
