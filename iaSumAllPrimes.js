@@ -20,3 +20,23 @@ function sumPrimes(num) {
 }
 
 sumPrimes(10);
+
+function sumPrimes2(num) {
+    debugger;
+  let sum = 0;
+  function NumWhichIsPrime(n) {
+    for (let i = 2; i < n; i++) {
+      if (n % i == 0) {
+        return false;
+      }
+    } return true;
+  }
+  for (let j = 0; j <= num; j++) {
+      if (NumWhichIsPrime(j) == true) {
+        sum += j;
+      }
+  }
+  return sum - 1;
+}
+
+sumPrimes2(10);
