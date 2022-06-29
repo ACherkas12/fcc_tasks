@@ -2,8 +2,9 @@ function convertHTML(str) {
   let map = new Map([['&', '&amp;'], ['<', '&lt;'], ['>', '&gt;'], ['"', '&quot;'], ["'", '&apos;']]);
   let newstr = '';
   for (let i = 0; i < str.length; i++) {
-    if (map.get(str[i])) {
-      newstr += map.get(str[i]);
+    let iFromMap = map.get(str[i]);
+    if (iFromMap) {
+      newstr += iFromMap;
     } else {
       newstr += str[i];
     }
